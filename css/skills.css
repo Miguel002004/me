@@ -1,0 +1,55 @@
+.selected{
+    grid-column: 3/4;
+}
+.container-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5,1fr);
+    align-self: center;
+    align-items: center;
+    justify-items: center;
+    height: 60vh;
+    position: relative;
+    top: 10vh;
+}
+.skill{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 20px;
+}
+.skill > img{
+    width: 54px;
+    height: 54px;
+    justify-self: end;
+}
+.skill-bar .bar-selected{
+    height: 10px;
+    width: 20px;
+    background-color: #000;
+}
+.skill-bar .bar-no-selected{
+    height: 10px;
+    width: 20px;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+.skill-bar{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(10,1fr);
+    column-gap: 5px;
+}
+@media (max-width: 700px) {
+    .container-content > .skill{
+        
+        grid-column: 1/2;
+    }
+    .container-content{
+        height: auto;
+        row-gap: 25px;
+        grid-template-rows: repeat(12,1fr);
+    }
+    .header-fixed > span > a{
+        display: none;
+    }
+}

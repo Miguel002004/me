@@ -1,0 +1,21 @@
+var bar_skill = document.querySelectorAll(".skill-bar");
+console.log(bar_skill);
+var count = 0;
+var myInterval = setInterval(()=>{
+    for (let y = 0; y < bar_skill.length; y++) {
+        let percent = bar_skill[y].getAttribute("data-percent");
+        if(count < percent){
+            bar_skill[y].children[count].style.backgroundColor = "black";
+        }
+    }
+    count++;
+    if(count >= 10){clearInterval(myInterval)}
+}, 300);
+
+/*
+for (let x = 0; x < bar_skill.length; x++) {
+    for (let y = 0; y < percent[x]; y++) {
+        bar_skill[x].children[y].style.backgroundColor = "black";
+    }
+}
+*/
