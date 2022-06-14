@@ -71,6 +71,7 @@ a{
         width: 100vw;
         height: 10vh;
         justify-content: center;
+        column-gap: 10px;
     }
     .menu{
         grid-column: 1/3;
@@ -79,6 +80,9 @@ a{
     }
     .container{
         grid-template-rows: 10vh 73.19vh 10vh;
+    }
+    .footer img{
+        margin: 0px;
     }
 }
 @media (max-width: 520px) {

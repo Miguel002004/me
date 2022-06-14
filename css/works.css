@@ -1,6 +1,21 @@
 .selected{
     grid-column: 4/5;
 }
+.container-content{
+    position: absolute;
+    top:10vh;
+    width: 100%;
+    text-align: center;
+}
+.title{
+    width: 100%;
+    text-align: center;
+}
+.container-content img{
+    width: 200px;
+    height: auto;
+    margin-top: 10vh;
+}
 @media (max-width: 700px) {
     .header-fixed > span > a{
         display: none;
