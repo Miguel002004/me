@@ -2,22 +2,102 @@
     grid-column: 2/3;
 }
 .container-content{
+    display: grid;
     position: absolute;
     top:10vh;
-    width: 100%;
+    height: 80vh;
+    width: 95vw;
+    margin-left: 5vw;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(3,1fr);    
     text-align: center;
+    justify-content: center;
 }
 .title{
     width: 100%;
     text-align: center;
 }
-.container-content img{
-    width: 200px;
-    height: auto;
-    margin-top: 10vh;
+.main-about-content{
+    
+    grid-column: 1/4;
+    grid-row: 2/4;
+    text-align: left;
+}
+.main-about-content li, .main-about-title p, .main-about-content p{
+    font-size: 1.5rem;
+    text-align: justify;
+}
+.main-about-role{
+    display: flex;
+    column-gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.main-about-title{
+    grid-column: 1/4;
+    grid-row: 1/2;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.main-about-img img{
+    height: 300px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    background-size: 100% auto;
+}
+.main-about-img{
+    grid-column: 4/6;
+    grid-row: 1/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 1024px) {
+    .main-about-content li, .main-about-title p, .main-about-content p{
+        font-size: 1.3rem;
+    }
+    .main-about-img img{
+        height: 250px;
+        width: 250px;
+    }
+    h2{
+        font-size: 1.3rem;
+    }
 }
 @media (max-width: 700px) {
     .header-fixed > span > a{
         display: none;
+    }
+    
+    .container-content{
+        justify-items: center;
+        width: 100vw;
+        margin-left: 0vw;
+        row-gap: 10px;
+        height: auto;
+        padding-bottom: 10vh;
+        padding: 0px 10px 10vh 10px;
+        grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));;    
+    }
+    .main-about-img{
+        grid-column: 1/6;
+        grid-row: 1/2;
+    }
+    .main-about-title{
+        grid-column: 1/6;
+        grid-row: 2/3;
+    }
+    .main-about-content{
+        grid-column: 1/6;
+        grid-row: 3/4;
+    }
+
+}
+@media (max-width: 380px) {
+    .main-about-img img{
+        width: 200px;
+        height: 200px;
     }
 }
