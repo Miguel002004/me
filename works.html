@@ -24,8 +24,15 @@
         </header>
         <!--Body-->
         <section class="container-content">
-            <h1 class="title">WEB SITE UNDER CONSTRUCTION</h1>
-            <img src="img\underConstruction.png" alt="Under Construction">
+            <!--h1 class="title">WEB SITE UNDER CONSTRUCTION</h1-->
+            <!--img src="img\underConstruction.png" alt="Under Construction"-->
+            <div class="cuadrado-padre" id="item_1" onclick="redirect('https://miguel-tic-tac-toe.surge.sh/')">
+                <div class="image-item"></div>
+                <div class="title-item">Tic Tac Toe</div>
+                <div class="cuadrado-hijo">
+                  <p>This page is the classic tic tac toe game. It is created with html, css and vanilla javascript.</p>
+                </div>
+              </div>
         </section>
         <!--Footer-->
         <footer class="footer">
@@ -33,5 +40,10 @@
             <a href="https://www.linkedin.com/in/jos%C3%A9-miguel-reyes-m%C3%A1rquez-a817a6153/"><img src="img\linkedin-icon.png" alt=""></a>
         </footer>
     </div>
+    <script>
+        function redirect(url){
+            location.assign(url);
+        }
+    </script>
 </body>
 </html>
